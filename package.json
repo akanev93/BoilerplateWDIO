@@ -32,7 +32,7 @@
     "@wdio/sauce-service": "^6.7.2",
     "@wdio/spec-reporter": "^6.7.0",
     "@wdio/sync": "^6.7.2",
-    "chromedriver": "^86.0.0",
+    "chromedriver": "^91.0.1",
     "eslint": "^7.13.0",
     "html-dnd": "^1.2.1",
     "ts-node": "^9.0.0",
