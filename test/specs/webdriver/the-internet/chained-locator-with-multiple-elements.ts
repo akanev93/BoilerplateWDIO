@@ -1,6 +1,6 @@
 import Large from 'src/the-internet/large.page';
 
-describe('Chained Locator', () => {
+describe.skip('Chained Locator', () => {
     it('should work', () => {
         Large.open();
         // elements are by purpose defined here and not in the page object model to show the usecase

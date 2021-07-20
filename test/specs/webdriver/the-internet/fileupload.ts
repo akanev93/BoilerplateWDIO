@@ -5,7 +5,7 @@ const path = require('path');
 
 const filePath = path.join(__dirname, 'fileupload.ts');
 
-describe('File Upload', () => {
+describe.skip('File Upload', () => {
     it('should work', () => {
         Upload.open();
         const remoteFilePath = browser.uploadFile(filePath);

@@ -1,6 +1,6 @@
 import TinyMCE from 'src/the-internet/tinymce.page';
 
-describe('iFrame', () => {
+describe.skip('iFrame', () => {
     it('should work', () => {
         TinyMCE.open();
         browser.switchToFrame(TinyMCE.iframe);

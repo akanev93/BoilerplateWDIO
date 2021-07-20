@@ -1,6 +1,6 @@
 import Dropdown from 'src/the-internet/dropdown.page';
 
-describe('Dropdown', () => {
+describe.skip('Dropdown', () => {
     it('should work', () => {
         Dropdown.open();
         expect(Dropdown.select).toHaveValue('');

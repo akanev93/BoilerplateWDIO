@@ -1,13 +1,13 @@
 import BasePage from '../base.page';
 
 class Home extends BasePage {
-    get title() { return 'WebdriverIO · Next-gen browser and mobile automation test framework for Node.js'; }
+    get title() { return 'OZON — интернет-магазин. Миллионы товаров по выгодным ценам'; }
 
     /**
      * Opens the page
      */
     open() {
-        super.open('https://webdriver.io');
+        super.open('https://www.ozon.ru/');
     }
 }
 
