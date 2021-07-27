@@ -2,6 +2,7 @@ import Home from 'src/wdio/home.page';
 
 import logger from '@wdio/logger';
 const log = logger('test-basic');
+const axios = require('axios');
 
 describe.skip('webdriver.io page', () => {
     it('should have the right title', () => {
@@ -20,8 +21,19 @@ describe.skip('browser', () => {
 describe('first test ozone page', () => {
     before(() => {
         Home.open();
+        browser.addCommand('getCurrentImg', function (url) {
+            return axios.get(url).then((response) => console.log(response.body));
+        });
     });
     it('test title', () => {
-        expect(browser).not.toHaveTitle(Home.title);
+        expect(browser).toHaveTitle(Home.title);
+    });
+    it('test banner images', () => {
+        const url = Home.currentImgUrl.map(item => item.getAttribute('src'));
+        console.log(url);
+        url.forEach(item => {
+            const el = browser.getCurrentImg(item);
+            console.log(el);
+        });
     });
 });
